@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Finance Dashboard</h1>
+
+  <!-- Summary Cards -->
+  <div class="cards">
+    <div class="card" id="balanceCard">Balance: ₹0</div>
+    <div class="card" id="incomeCard">Income: ₹0</div>
+    <div class="card" id="expenseCard">Expense: ₹0</div>
+  </div>
+
+  <!-- Role Selector -->
+  <label for="role">Select Role:</label>
+  <select id="role">
+    <option value="viewer">Viewer</option>
+    <option value="admin">Admin</option>
+  </select>
+
+  <!-- Search -->
+  <input type="text" id="search" placeholder="Search by category">
+
+  <!-- Transactions Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <!-- Charts + Middle Card -->
+  <div class="charts">
+    <canvas id="lineChart"></canvas>
+
+    <div class="chartInfoCard" id="middleInfo">
+      <h3>Highest Spending Category</h3>
+      <p id="highestCategory">Loading...</p>
+    </div>
+
+    <canvas id="pieChart"></canvas>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
