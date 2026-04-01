@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f6fa;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #88e66f;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table thead {
+  background-color: #2980b9;
+  color: white;
+}
+
+table thead th {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #1f618d;
+}
+
+table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f1c40f;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.income { color: green; font-weight: bold; }
+.expense { color: red; font-weight: bold; }
+
+/* Charts + Middle Card */
+.charts {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+canvas {
+  max-width: 400px;
+  max-height: 300px;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Middle Info Card */
+.chartInfoCard {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .charts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
